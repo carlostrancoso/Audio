@@ -30,7 +30,7 @@ function draw() {
   console.log(vol);
 
   rotateZ(PI);
-  scale(0.2+vol*10);
+  scale(2+vol*10);
  // model(busto);
 
  
