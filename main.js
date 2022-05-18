@@ -51,22 +51,9 @@ function draw() {
 
   
   
-  for (let j = 0; j < 6; j+=3) {
-    push();
-    for (let i = 0; i < 80; i+=5) {
-      translate(
-        sin(frameCount * 0.001 + j) * vol*700,
-        sin(frameCount * 0.01 + j) * vol*200,
-        i * 0.1
-      );
-      rotateZ(frameCount * 0.002);
-      push();
-      model(busto);
-      pop();
-    }
-    pop();
-  }
-  
+
+   model(busto);
+ 
   
   
 }
