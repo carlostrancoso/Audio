@@ -29,8 +29,8 @@ function draw() {
   var vol = mic.getLevel();
   console.log(vol);
 
-  rotateZ(PI);
-  scale(1.5+vol*30);
+  
+  scale(1.5+vol*40);
  // model(busto);
 
  
@@ -41,19 +41,16 @@ function draw() {
   pointLight(2500, 250, 250, 150, 150, height/2);
   //normalMaterial();
   texture(map);
-  orbitControl(5,5,0.2);
+  //(5,5,0.2);
   //rotateX(PI/6);
   //rotateY(-1);
   
   noStroke();
-
-  
-
-  
-  
-
-   model(busto);
+  rotateZ(PI);
+  rotateY(HALF_PI);
+  model(busto);
  
+  
   
   
 }
