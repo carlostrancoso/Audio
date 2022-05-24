@@ -1,6 +1,7 @@
 let busto;
 let map;
 var mic;
+var easycam;
 
 function preload() {
   busto = loadModel('BUSTO_15_GU.obj', true);
@@ -16,9 +17,18 @@ function setup() {
   //var y = (windowHeight - height) / 2;
   //cnv.position(x, y);
 
+  easycam = createEasyCam();
+
   mic = new p5.AudioIn();
   mic.start();
+
+  document.oncontextmenu = function() { return false; }
   
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  easycam.setViewport([0,0,windowWidth, windowHeight]);
 }
 
 function draw() {
@@ -30,15 +40,15 @@ function draw() {
   console.log(vol);
 
   
-  scale(1.5+vol*40);
- // model(busto);
+  scale(1.5+vol*45);
 
  
   let locX = mouseX - width / 2;
   let locY = mouseY - height / 2;
   pointLight(250, 0, 0, 0, 100, width/2);
   pointLight(0, 0, 250, -100, -100, height/2);
-  pointLight(2500, 250, 250, 150, 150, height/2);
+  pointLight(0, 250, 0, 100, 150, height/2);
+  ambientLight(200);
   //normalMaterial();
   texture(map);
   //(5,5,0.2);
@@ -49,7 +59,6 @@ function draw() {
   rotateZ(PI);
   rotateY(HALF_PI);
   model(busto);
- 
   
   
   
