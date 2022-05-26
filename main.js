@@ -1,7 +1,8 @@
 let busto;
 let map;
 var mic;
-//var easycam;
+var easycam;
+var myCanvas;
 
 function preload() {
   busto = loadModel('BUSTO_15_GU.obj', true);
@@ -10,10 +11,14 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
+  //var cnv = createCanvas(300, 450, WEBGL);
   //debugMode();
   background(0);
+  //var x = (windowWidth - width) / 2;
+  //var y = (windowHeight - height) / 2;
+  //cnv.position(x, y);
 
-  //easycam = createEasyCam();
+  easycam = createEasyCam();
 
   mic = new p5.AudioIn();
   mic.start();
