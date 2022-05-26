@@ -1,7 +1,7 @@
 let busto;
 let map;
 var mic;
-var easycam;
+//var easycam;
 
 function preload() {
   busto = loadModel('BUSTO_15_GU.obj', true);
@@ -13,7 +13,7 @@ function setup() {
   //debugMode();
   background(0);
 
-  easycam = createEasyCam();
+  //easycam = createEasyCam();
 
   mic = new p5.AudioIn();
   mic.start();
