@@ -26,7 +26,7 @@ function draw() {
   var vol = mic.getLevel();
   //console.log(vol);
 
-  scale(1.5+vol*45);
+  scale(1.3+vol*50);
  
   let locX = mouseX - width / 2;
   let locY = mouseY - height / 2;
@@ -40,7 +40,7 @@ function draw() {
   rotateZ(PI);
   rotateY(HALF_PI);
   model(busto);
-  orbitControl(-2,-2,0);
+  orbitControl(-5,-5,0);
 
 }
 
