@@ -10,12 +10,8 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
-  //var cnv = createCanvas(300, 450, WEBGL);
   //debugMode();
   background(0);
-  //var x = (windowWidth - width) / 2;
-  //var y = (windowHeight - height) / 2;
-  //cnv.position(x, y);
 
   easycam = createEasyCam();
 
@@ -28,7 +24,7 @@ function setup() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  //easycam.setViewport([0,0,windowWidth, windowHeight]);
+  easycam.setViewport([0,0,windowWidth, windowHeight]);
 }
 
 function draw() {
